@@ -1,0 +1,14 @@
+# GitHub
+.github/
+.git/
+
+# IDEs
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+venv/
+
+# Environment
+.env

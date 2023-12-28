@@ -1,15 +1,18 @@
 from datetime import datetime
 
+from fastapi import APIRouter
+
 from configs.logger import print_info_log, catch_error
 from constants.log_tags import LogTag
 from constants.voiceover_state import VoiceoverState
 from models.project_status import ProjectStatus
-from routers.dub import dub_router
 from services.firebase.firestore.project import update_project_status_and_translated_link_by_id
 from services.firebase.storage.get_file_url import get_file_url
 from services.rask.create_project import create_project
 from services.rask.get_voiceover_result import get_voiceover_result
 from services.rask.process_project import process_project
+
+dub_router = APIRouter(tags=["DUB"])
 
 
 @dub_router.get("/")

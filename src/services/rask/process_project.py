@@ -29,7 +29,6 @@ def process_project(
     process_response = requests.post(
         url=f"{RASK_ENDPOINT_URL}/project/{rask_project_id}",
         json={
-            # TODO: add body data (voice_spec & transcription_spec)
             "voice_spec": {
                 "id": 0
             },

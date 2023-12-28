@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 
-from routers.dub import dub_router
+from controllers.generate_rask import dub_router
 
 app = FastAPI()
 
